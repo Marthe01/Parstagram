@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if PFUser.current() != nil{
             let main = UIStoryboard(name: "Main", bundle: nil)
-            let feednavigationController = main.instantiateViewController(identifier: "FeedNavigationController")
-            window?.rootViewController = feednavigationController
+            let feedNavigationController = main.instantiateViewController(identifier: "FeedNavigationController")
+            window?.rootViewController = feedNavigationController
         }
         //guard let _ = (scene as? UIWindowScene) else { return }
     }
